@@ -6,8 +6,6 @@
 
 The project demonstrates a **Reactive Embedded System** that transitions between autonomous flight states and an alert state upon the detection of environmental triggers (simulated via an onboard button/analog proxy).
 
----
-
 ## File Structure and Functionality
 
 The software is designed with a modular architecture, separating low-level hardware abstraction from high-level mission logic.
@@ -25,8 +23,6 @@ The software is designed with a modular architecture, separating low-level hardw
     - `ess_helper.h`: A utility header provided for compatibility with the project environment.
 
     - `main.h`: Contains the standard STM32 HAL includes and system-wide definitions required for the hardware to function.
-
----
 
 # Technical Features
 
