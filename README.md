@@ -10,6 +10,25 @@ The project demonstrates a **Reactive Embedded System** that transitions between
 
 The software is designed with a modular architecture, separating low-level hardware abstraction from high-level mission logic.
 
+```txt
+BioThopter/
+├── Core/
+│   ├── Inc/                    
+│   │   ├── main.h              
+│   │   ├── drone_driver.h      
+│   │   ├── led_driver.h        
+│   │   ├── pwm_driver.h        
+│   │   └── ess_helper.h       
+│   └── Src/                    
+│       ├── main.c              
+│       ├── drone_driver.c      
+│       ├── led_driver.c        
+│       └── pwm_driver.c       
+├── Drivers/
+│   └── STM32F4xx_HAL_Driver/   
+└── BioThopter.ioc         
+```
+
 1. **Mission Logic Layer**
     - `main.c`: The "Executive" of the system. It contains the primary Finite State Machine (FSM) which cycles through `INIT`, `FLIGHT`, and `BIO_DETECTED` states. It handles the reactive logic, such as switching to an alert mode when a "biosignature" is detected via a button press.
 
