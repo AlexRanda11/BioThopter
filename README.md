@@ -25,8 +25,9 @@ BioThopter/
 │       ├── led_driver.c        
 │       └── pwm_driver.c       
 ├── Drivers/
-│   └── STM32F4xx_HAL_Driver/   
-└── BioThopter.ioc         
+│   └── STM32F4xx_HAL_Driver/ 
+├── BioThopter.ioc  
+└── README.md         
 ```
 
 1. **Mission Logic Layer**
