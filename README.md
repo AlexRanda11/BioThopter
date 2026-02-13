@@ -20,7 +20,7 @@ The software is designed with a modular architecture, separating low-level hardw
 2. **Hardware Abstraction Layer (HAL)**
     - `pwm_driver.c / .h`: A custom software PWM implementation. It tracks a global counter and compares it against individual channel values to toggle GPIO pins, allowing for 0-100% brightness control across the LED array.
 
-    - `led_driver.c / .h`: Provides the low-level bitwise manipulation of the STM32 GPIO registers. It includes functions for initializing LEDs, toggling them individually, or performing synchronized actions like blink_all().
+    - `led_driver.c / .h`: Provides the low-level bitwise manipulation of the STM32 GPIO registers. It includes functions for initializing LEDs, toggling them individually, or performing synchronized actions like `blink_all()`.
 
     - `ess_helper.h`: A utility header provided for compatibility with the project environment.
 
