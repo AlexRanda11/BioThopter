@@ -1,4 +1,4 @@
-/* * PROJECT M.A.R.T.I.A.N (Biothopter)
+/* * BioThopter
  * Target: STM32 (Bare Metal)
  * */
 #include "main.h"
@@ -11,7 +11,7 @@
 int main(void) {
 	uint8_t is_pressed;
 
-	// TODO: Initialize PWM for 4 LEDs (Timers 1-4) [Requirement: Human Interface]
+	// Initialize PWM for 4 LEDs
 	LED_t front;
 	led_init(&front, PORTD, 13);
 

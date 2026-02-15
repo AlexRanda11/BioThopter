@@ -38,4 +38,4 @@ void handle_rotate_counter_clockwise(void);
 void Log_Event(SystemState);
 void Process_Telemtry(void);
 
-#endif /* INC_DRONE_DRIVER_H_ */
+#endif /* DRONE_DRIVER_H */
