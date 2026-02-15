@@ -23,15 +23,14 @@ void led_init(LED_t*, volatile uint32_t*, uint32_t);
 
 void led_on(LED_t*);
 void led_on_all(LED_t*, LED_t*, LED_t*, LED_t*);
-void led_on_msec(LED_t*, uint32_t, uint32_t);
 
 void led_off(LED_t*);
 void led_off_all(LED_t*, LED_t*, LED_t*, LED_t*);
-void led_off_msec(LED_t*, uint32_t);
+
+void delay_msec(uint32_t);
 
 void blink(LED_t*);
 void blink_all(LED_t*, LED_t*, LED_t* , LED_t*);
 void blink_all_times(LED_t*, LED_t*, LED_t*, LED_t*, uint8_t);
 
-void delay_msec(uint32_t);
 #endif /* LED_DRIVER_H */

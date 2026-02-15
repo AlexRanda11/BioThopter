@@ -22,13 +22,6 @@ void led_on_all(LED_t* led1, LED_t* led2, LED_t* led3, LED_t* led4) {
 	*(led4->port) |= (1 << led4->pin);
 }
 
-void led_on_msec(LED_t* led, uint32_t on_time, uint32_t off_time) {
-	*(led->port) = (1 << led->pin);
-
-	delay_msec(on_time);
-	led_off_msec(led, off_time);
-}
-
 void led_off(LED_t* led) {
 	*(led->port) = (0 << led->pin);
 }
@@ -40,10 +33,8 @@ void led_off_all(LED_t* led1, LED_t* led2, LED_t* led3, LED_t* led4) {
 	*(led4->port) &= (0 << led4->pin);
 }
 
-void led_off_msec(LED_t* led, uint32_t off_time) {
-	*(led->port) = (0 << led->pin);
-
-	delay_msec(off_time);
+void delay_msec(uint32_t delay) {
+	HAL_Delay(delay);
 }
 
 void blink(LED_t* led) {
@@ -71,9 +62,3 @@ void blink_all_times(LED_t* left, LED_t* front, LED_t* right, LED_t* back, uint8
 		blink(back);
 	}
 }
-
-void delay_msec(uint32_t delay) {
-	HAL_Delay(delay);
-}
-
-
